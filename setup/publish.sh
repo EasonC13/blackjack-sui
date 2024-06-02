@@ -32,7 +32,7 @@ switch_res=$(sui client switch --address ${ADMIN_ADDRESS})
 
 switch_env=$(sui client switch --env $1)
 
-publish_res=$(sui client publish --skip-fetch-latest-git-deps --gas-budget 2000000000 --json ${MOVE_PACKAGE_PATH})
+publish_res=$(cd ${MOVE_PACKAGE_PATH} && sui client publish --skip-fetch-latest-git-deps --skip-dependency-verification --gas-budget 2000000000 --json)
 
 echo ${publish_res} >.publish.res.json
 
