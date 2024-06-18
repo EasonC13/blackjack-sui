@@ -5,6 +5,7 @@ import { Button } from "../ui/button";
 import { useEnokiFlow } from "@mysten/enoki/react";
 import { useRouter } from "next/navigation";
 import toast from "react-hot-toast";
+import { ConnectModal } from "@mysten/dapp-kit";
 
 export const SignInBanner = () => {
   const enokiFlow = useEnokiFlow();
@@ -74,6 +75,17 @@ export const SignInBanner = () => {
               height={32}
             />
           </Button>
+          <ConnectModal
+            trigger={
+              <button
+                className="
+              h-[45px] w-[130px] md:w-[150px] rounded-xl bg-[#2e79dc] font-semibold text-white
+              "
+              >
+                Connect Wallet
+              </button>
+            }
+          ></ConnectModal>
         </div>
       </div>
       <div className="flex flex-col items-center text-white text-[12px]">

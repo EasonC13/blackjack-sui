@@ -5,7 +5,6 @@ import React from "react";
 import { TopNavbar } from "./TopNavbar";
 
 export const LargeScreenLayout = ({ children }: ChildrenProps) => {
-
   return (
     <div className={`relative w-full h-full flex-col`}>
       <TopNavbar />
